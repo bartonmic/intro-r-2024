@@ -38,7 +38,10 @@ typeof(TRUE)
 identical(42, "42") # type matters for identity
 
 # variables ----
-
+x <- "this is a string"
+x
+typeof(x)
+x <- 10
 
 # data structures ----
 # vectors have a single dimension, like a column or row of data
