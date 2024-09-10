@@ -45,6 +45,27 @@ x <- 10
 
 # data structures ----
 # vectors have a single dimension, like a column or row of data
+a <- c("1", "2", "3")
+a
+a <- c(1, 2, 3)
+a
+a + 1
+
+a <- c(1, 2, 3, "4")  # R will auto-type to form that "works"
+a
+typeof(a)
+
+a <- c(1, 2, 3)
+
+a < 3   # evaluates each item in the vector one by one
+
+any(a < 3)
+all(a < 3)
+
+3 %in% a  # testing membership in a vector
+!4 %in% a
+
+
 
 # data frames - the key structure for data science, multi-dimensional
 #   collections of vectors
