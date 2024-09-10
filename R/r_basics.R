@@ -3,6 +3,9 @@
 #   little minds"   -Ralph Waldo Emerson 
 
 # Literals ----
+"this is a string literal"  # double quotes preferred in R but not required
+42
+T
 
 # Operators ----
 
@@ -19,5 +22,4 @@
 # Special type: factors, and putting it all together ----
 # factors are categorical variables with a fixed set of
 #   potential values
-
 
