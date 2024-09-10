@@ -70,6 +70,17 @@ all(a < 3)
 # data frames - the key structure for data science, multi-dimensional
 #   collections of vectors
 
+df <- data.frame(a = c(1, 2, 3), 
+                 b = c("joe", "tammy", "matt"))   #collection of vectors
+df
+
+df$a  # references single column
+
+df$mode <- c("bike", "car", "bus")
+
+df
+
+summary(df)   #summarizes by column
 
 # Special type: factors, and putting it all together ----
 # factors are categorical variables with a fixed set of
