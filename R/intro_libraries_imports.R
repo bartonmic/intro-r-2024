@@ -14,3 +14,24 @@ summary(sta_meta)
 library(readxl)
 icebreaker_answers <- read_excel("data/icebreaker_answers.xlsx")
 View(icebreaker_answers)
+
+library(dplyr)
+
+odot_meta <- sta_meta |>
+  filter(
+    agency == "ODOT", 
+    highwayid == 1
+    )
+
+# looking for NAs
+nas_meta <- sta_meta |>
+  filter(
+    is.na(detectorlocation)
+  )
+
+# excluding NAs
+real_meta <- sta_meta |>
+  filter(
+    !is.na(detectorlocation)
+  )
+
