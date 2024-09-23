@@ -107,3 +107,27 @@ p + geom_point() + geom_smooth(method = "lm") +
                          )
            )
   )
+
+# simple linear (default Pearson) correlation
+cor(comm_19_22$wfh_chg, comm_19_22$transit_chg)
+
+# model it ----
+# model formula is depvar ~ 0 + X1 + X2...
+m <- lm(transit_chg ~ wfh_chg,
+        data = comm_19_22)
+summary(m)
+
+# model is an object ready for re-use!
+head(m$model) # model comes data included!
+
+scen1 <- comm_19_22 |>
+  mutate(wfh_chg = wfh_chg * 1.5)
+
+scen1_pred <- predict(m, newdata = scen1)
+
+# difference in total daily transit impact from 50% increase in WFH change
+sum(comm_19_22$transit_chg)
+sum(scen1_pred)
+
+# update(model, data=) function re-estimates model on new data
+
